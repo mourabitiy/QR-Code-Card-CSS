@@ -1,0 +1,82 @@
+:root {
+    --White: hsl(0, 0%, 100%);
+    --Light_gray: hsl(212, 45%, 89%);
+    --Grayish_blue: hsl(220, 15%, 55%);
+    --Dark_blue: hsl(218, 44%, 22%);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    background-color: var(--Light_gray);
+    font-family: 'Outfit', sans-serif;
+}
+
+.container {
+    width: 20em;
+    background-color: var(--White);
+    margin: 15em auto;
+    display: flex;
+    flex-direction: column;
+    height: 30em;
+    border-radius: 1.3em;
+    padding-top: .3em;
+    box-shadow: 0 14px 28px rgba(131, 131, 131, 0.25), 0 10px 10px rgba(194, 194, 194, 0.22);
+    transition: all 0.4s cubic-bezier(.25, .8, .25, 1);
+}
+
+.container:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.container img {
+    width: 100%;
+    align-self: center;
+    padding: .5em;
+    border-radius: 1em;
+}
+
+.container>h3 {
+    color: var(--Dark_blue);
+    font-weight: 700;
+    text-align: center;
+    margin: .7em;
+}
+
+.container>p {
+    color: var(--Grayish_blue);
+    text-align: center;
+    font-weight: 400;
+    font-size: 13px;
+    margin: 1em 1.5em 3em 1.5em;
+}
+
+
+/*Media query*/
+
+@media screen and (max-width:660px) {
+    .container {
+        width: 40%;
+        height: 25em;
+    }
+}
+
+@media screen and (max-width :280px) {
+    .container {
+        width: 50%;
+    }
+}
